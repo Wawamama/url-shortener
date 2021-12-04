@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Helmet } from 'react-helmet'
+import './App.css'
+import Url from './Url'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Helmet>
+				<title>URL Shortener</title>
+			</Helmet>
+			<div className="App">
+				<h1>URL Shortener</h1>
+				<Url />
+			</div>
+		</>
+	)
 }
 
-export default App;
+export default App
